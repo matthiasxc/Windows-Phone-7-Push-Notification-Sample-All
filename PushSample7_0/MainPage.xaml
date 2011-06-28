@@ -1,0 +1,87 @@
+﻿<phone:PhoneApplicationPage
+                            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                            xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+                            xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+                            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                            xmlns:Custom="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" xmlns:GalaSoft_MvvmLight_Command="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Extras.WP7" x:Class="PushSample7_0.MainPage"
+                            FontFamily="{StaticResource PhoneFontFamilyNormal}"
+                            Foreground="{StaticResource PhoneForegroundBrush}"
+                            SupportedOrientations="Portrait"
+                            Orientation="Portrait"
+                            mc:Ignorable="d"
+                            d:DesignWidth="480"
+                            d:DesignHeight="768"
+                            shell:SystemTray.IsVisible="True"
+                            DataContext="{Binding Main, Source={StaticResource Locator}}" FontSize="24">
+    
+	<!-- Sample code showing usage of ApplicationBar -->
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem x:Name="menuItem1" Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem x:Name="menuItem2" Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+            <shell:ApplicationBarIconButton x:Name="appbar_button1" IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton x:Name="appbar_button2" IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+   
+
+
+	<!--LayoutRoot contains the root grid where all other page content is placed-->
+	<Grid x:Name="LayoutRoot"
+	      Background="Transparent">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+
+		<!--TitlePanel contains the name of the application and page title-->
+		<StackPanel x:Name="TitlePanel"
+		            Grid.Row="0"
+		            Margin="24,24,0,12">
+			<TextBlock x:Name="ApplicationTitle"
+			           Text="Windows Phone 7 Push Sample App"
+			           Style="{StaticResource PhoneTextNormalStyle}" FontFamily="Segoe WP Black" FontSize="23.5" Margin="0,0,12,0" />
+			<TextBlock x:Name="PageTitle"
+			           Text="push me around"
+			           Margin="-3,-8,0,0"
+			           Style="{StaticResource PhoneTextTitle1Style}" FontSize="60" />
+		</StackPanel>
+
+		<!--ContentPanel - place additional content here-->
+		<ScrollViewer x:Name="ContentGrid"
+		      Grid.Row="1">
+			<StackPanel Margin="12,0,0,0">
+				<TextBlock TextWrapping="Wrap" Text="Select the push notifications you want to register for:" FontSize="22" Margin="12,0,0,0"/>
+				<CheckBox x:Name="ToastNotify" Content="Toast Notifications" FontSize="28" FontFamily="Segoe WP SemiLight" 
+							IsChecked="{Binding IsUsingToast, Mode=TwoWay}"/>
+				<CheckBox x:Name="TileNotifySimple" Content="Tile Notifications (title and/or number)" FontSize="28" FontFamily="Segoe WP SemiLight" 
+							IsChecked="{Binding IsUsingSimpleTile, Mode=TwoWay}"/>				
+				<CheckBox x:Name="TileNotifyLive" Content="Tile Notifications (Live Tile images)" FontSize="28" 
+							FontFamily="Segoe WP SemiLight" IsChecked="{Binding IsUsingLiveTile, Mode=TwoWay}"/>
+				<ProgressBar Height="10" Visibility="{Binding IsGettingPushUri, Converter={StaticResource BoolToVis}}" IsIndeterminate="{Binding IsGettingPushUri}"/>
+				<Border Visibility="{Binding HasNotificationUri, Converter={StaticResource RevBoolToVis}}" >
+					<Button x:Name="GetUri" Content="Get Notificaiton Uri" Visibility="{Binding IsGettingPushUri, Converter={StaticResource RevBoolToVis}}" >
+						<Custom:Interaction.Triggers>
+							<Custom:EventTrigger EventName="Click">
+								<GalaSoft_MvvmLight_Command:EventToCommand Command="{Binding GetNotificationUri, Mode=OneWay}"/>
+							</Custom:EventTrigger>
+						</Custom:Interaction.Triggers>
+					</Button>
+				</Border>
+				<StackPanel x:Name="UriGotten" Visibility="{Binding HasNotificationUri, Converter={StaticResource BoolToVis}}">
+					<TextBlock x:Name="UriText" Text="{Binding PushUri}" Margin="0,12" TextWrapping="Wrap" />
+					<Button Content="Email this Uri" Click="SendUriToMe" />
+				</StackPanel>
+				
+					
+			</StackPanel>
+		</ScrollViewer>
+	</Grid>
+   
+
+
+</phone:PhoneApplicationPage>

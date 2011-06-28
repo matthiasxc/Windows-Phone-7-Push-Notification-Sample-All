@@ -1,0 +1,12 @@
+﻿<xapCache source="C:\Users\Matthias\Documents\Visual Studio 2010\Projects\PushSample7_0\PushSample7_0\Bin\Release\PushSample7_0.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="6/15/2011 12:13:09 AM">
+  <file source="C:\Users\Matthias\Documents\Visual Studio 2010\Projects\PushSample7_0\PushSample7_0\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="5/30/2011 6:35:52 AM" />
+  <file source="C:\Users\Matthias\Documents\Visual Studio 2010\Projects\PushSample7_0\PushSample7_0\obj\Release\PushSample7_0.dll" archivePath="PushSample7_0.dll" lastWriteTime="6/15/2011 12:13:08 AM" />
+  <file source="C:\Program Files\Laurent Bugnion (GalaSoft)\Mvvm Light Toolkit\Binaries\WP7\GalaSoft.MvvmLight.Extras.WP7.dll" archivePath="GalaSoft.MvvmLight.Extras.WP7.dll" lastWriteTime="5/10/2011 10:29:46 AM" />
+  <file source="C:\Program Files\Laurent Bugnion (GalaSoft)\Mvvm Light Toolkit\Binaries\WP7\GalaSoft.MvvmLight.WP7.dll" archivePath="GalaSoft.MvvmLight.WP7.dll" lastWriteTime="5/10/2011 10:29:48 AM" />
+  <file source="D:\WP7_Downloads\WP7Contrib\Binaries\Release\Serialization.dll" archivePath="Serialization.dll" lastWriteTime="5/13/2011 4:27:43 PM" />
+  <file source="C:\Program Files\Laurent Bugnion (GalaSoft)\Mvvm Light Toolkit\Binaries\WP7\System.Windows.Interactivity.dll" archivePath="System.Windows.Interactivity.dll" lastWriteTime="5/10/2011 10:29:48 AM" />
+  <file source="C:\Users\Matthias\Documents\Visual Studio 2010\Projects\PushSample7_0\PushSample7_0\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="5/30/2011 6:35:52 AM" />
+  <file source="C:\Users\Matthias\Documents\Visual Studio 2010\Projects\PushSample7_0\PushSample7_0\Background.png" archivePath="Background.png" lastWriteTime="5/30/2011 6:35:52 AM" />
+  <file source="C:\Users\Matthias\Documents\Visual Studio 2010\Projects\PushSample7_0\PushSample7_0\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="5/30/2011 6:35:52 AM" />
+  <file source="C:\Users\Matthias\Documents\Visual Studio 2010\Projects\PushSample7_0\PushSample7_0\Bin\Release\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="6/13/2011 9:58:56 PM" />
+</xapCache>

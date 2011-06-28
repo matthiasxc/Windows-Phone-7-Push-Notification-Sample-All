@@ -1,0 +1,9 @@
+﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="PushSample7_0" EntryPointType="PushSample7_0.App" RuntimeVersion="3.0.40624.0">
+  <Deployment.Parts>
+    <AssemblyPart x:Name="PushSample7_0" Source="PushSample7_0.dll" />
+    <AssemblyPart x:Name="GalaSoft.MvvmLight.Extras.WP7" Source="GalaSoft.MvvmLight.Extras.WP7.dll" />
+    <AssemblyPart x:Name="GalaSoft.MvvmLight.WP7" Source="GalaSoft.MvvmLight.WP7.dll" />
+    <AssemblyPart x:Name="Serialization" Source="Serialization.dll" />
+    <AssemblyPart x:Name="System.Windows.Interactivity" Source="System.Windows.Interactivity.dll" />
+  </Deployment.Parts>
+</Deployment>
